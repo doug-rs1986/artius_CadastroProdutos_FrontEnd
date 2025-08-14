@@ -1,0 +1,94 @@
+/* Variáveis principais */
+:root {
+  --color-primary: #EC7000;
+  --color-primary-dark: #CC5E00;
+  --color-primary-light: #FF8C00;
+  --color-secondary: #FFFFFF;
+  --color-text-primary: #333333;
+  --color-background: #F5F5F5;
+  --font-primary: Arial, sans-serif;
+  --font-size-title: 2rem;
+  --font-size-body: 1rem;
+  --font-weight-bold: 700;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+  --border-radius-medium: 8px;
+  --shadow-small: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.product-form, .product-list {
+  background: var(--color-secondary);
+  border-radius: var(--border-radius-medium);
+  box-shadow: var(--shadow-small);
+  margin: var(--spacing-medium) auto;
+  padding: var(--spacing-large);
+  max-width: 500px;
+}
+
+label {
+  display: block;
+  margin-bottom: var(--spacing-medium);
+  font-weight: 500;
+}
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: var(--spacing-medium);
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius-medium);
+}
+button {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius-medium);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:disabled {
+  background: #aaa;
+}
+button:hover {
+  background: var(--color-primary-dark);
+}
+.response-label {
+  margin-top: var(--spacing-medium);
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .product-form, .product-list {
+    max-width: 95vw;
+    padding: var(--spacing-medium);
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .product-form, .product-list {
+    max-width: 80vw;
+    padding: 18px;
+  }
+}
+
+@media (min-width: 901px) {
+  .product-form, .product-list {
+    max-width: 500px;
+    padding: var(--spacing-large);
+  }
+}
